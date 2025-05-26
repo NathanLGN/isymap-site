@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="https://nathanlgn.github.io/isymap-site/sitemap.xsl"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+<url>
+<loc>https://nathanlgn.github.io/isymap-site/</loc>
+</url>
+<url>
+<loc>https://nathanlgn.github.io/isymap-site/contact.html</loc>
+<lastmod>2025-04-28T10:34:33+02:00</lastmod>
+</url>
+<url>
+<loc>https://nathanlgn.github.io/isymap-site/cookies.html</loc>
+<lastmod>2025-05-14T10:32:17+02:00</lastmod>
+</url>
+<url>
+<loc>https://nathanlgn.github.io/isymap-site/credits.html</loc>
+<lastmod>2025-05-14T10:31:34+02:00</lastmod>
+</url>
+<url>
+<loc>https://nathanlgn.github.io/isymap-site/la-societe.html</loc>
+<lastmod>2025-04-28T10:34:25+02:00</lastmod>
+</url>
+<url>
+<loc>https://nathanlgn.github.io/isymap-site/logiciels.html</loc>
+<lastmod>2025-04-28T10:33:53+02:00</lastmod>
+</url>
+<url>
+<loc>https://nathanlgn.github.io/isymap-site/mentions-legales.html</loc>
+<lastmod>2025-05-14T10:31:50+02:00</lastmod>
+</url>
+<url>
+<loc>https://nathanlgn.github.io/isymap-site/nos-reussites.html</loc>
+<lastmod>2025-04-28T10:34:02+02:00</lastmod>
+</url>
+<url>
+<loc>https://nathanlgn.github.io/isymap-site/politique-de-confidentialite.html</loc>
+<lastmod>2025-05-14T10:32:11+02:00</lastmod>
+</url>
+<url>
+<loc>https://nathanlgn.github.io/isymap-site/produits.html</loc>
+<lastmod>2025-04-28T10:33:42+02:00</lastmod>
+</url>
+<url>
+<loc>https://nathanlgn.github.io/isymap-site/solutions.html</loc>
+<lastmod>2025-04-28T09:50:43+02:00</lastmod>
+</url>
+</urlset>
