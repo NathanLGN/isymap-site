@@ -617,3 +617,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 })();
+
+document.addEventListener('DOMContentLoaded', () => {
+    const loader = document.getElementById('intro-loader');
+    if (loader) {
+        setTimeout(() => {
+            loader.classList.add('loaded');
+        }, 1800); // délai de disparition
+    }
+});
