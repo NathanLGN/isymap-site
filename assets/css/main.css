@@ -2177,6 +2177,27 @@ textarea {
           transform: translate(-50%, 0);
 }
 
+/* Comportement par défaut */
+.custom-hamburger .hamburger-lines span {
+  transition: all 0.25s ease-in-out;
+}
+
+/* Quand le menu est ouvert */
+.custom-hamburger.is-active .hamburger-lines span:nth-child(1) {
+  transform: rotate(45deg) translate(6.5px, 6.5px);
+  background-color: #969696;
+}
+
+.custom-hamburger.is-active .hamburger-lines span:nth-child(2) {
+  opacity: 0;
+  transform: translateX(-20px);
+}
+
+.custom-hamburger.is-active .hamburger-lines span:nth-child(3) {
+  transform: rotate(-45deg) translate(6.5px, -6.5px);
+  background-color: #969696; 
+}
+
 /* 
  * Ajout de css header
  */
@@ -2250,7 +2271,7 @@ textarea {
 
 .top.js-header {
   top: 0;
-  z-index: 1000;
+  z-index: 10;
   background-color: white;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
