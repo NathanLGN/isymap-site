@@ -621,6 +621,7 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('DOMContentLoaded', function () {
     const loader = document.querySelector('.intro-loader');
     const logo = document.querySelector('.intro-logo');
+    const isHome = document.body.classList.contains('home-template');
 
     if (loader && logo) {
         setTimeout(() => {
@@ -640,5 +641,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 }, 500);
             }, 600);
         }, 1000); // Temps d'attente avant démarrage (facultatif)
+    } 
+    else if (loader) {
+        // Supprime immédiatement le loader sur les autres pages
+        loader.remove();
     }
 });
