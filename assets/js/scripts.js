@@ -618,11 +618,27 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 })();
 
-document.addEventListener('DOMContentLoaded', () => {
-    const loader = document.getElementById('intro-loader');
-    if (loader) {
+document.addEventListener('DOMContentLoaded', function () {
+    const loader = document.querySelector('.intro-loader');
+    const logo = document.querySelector('.intro-logo');
+
+    if (loader && logo) {
         setTimeout(() => {
-            loader.classList.add('loaded');
-        }, 1800); // délai de disparition
+            // Animation du logo (monte et disparaît)
+            logo.style.transition = 'all 0.6s ease';
+            logo.style.transform = 'translateY(-50px)';
+            logo.style.opacity = '0';
+
+            // Disparition du fond blanc après le logo
+            setTimeout(() => {
+                loader.style.transition = 'opacity 0.5s ease';
+                loader.style.opacity = '0';
+
+                // Supprimer complètement le loader après fondu
+                setTimeout(() => {
+                    loader.style.display = 'none';
+                }, 500);
+            }, 600);
+        }, 1000); // Temps d'attente avant démarrage (facultatif)
     }
 });
