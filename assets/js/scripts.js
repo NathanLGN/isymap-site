@@ -621,7 +621,7 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('DOMContentLoaded', function () {
     const loader = document.querySelector('.intro-loader');
     const logo = document.querySelector('.intro-logo');
-    const path = window.location.pathname.replace(/\/+$/, ''); // supprime les / finaux
+    const path = window.location.pathname;
     const isHomePage = path.endsWith('/') || path.endsWith('/index.html');
 
     if (loader && logo && isHomePage) {
