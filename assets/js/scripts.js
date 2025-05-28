@@ -622,8 +622,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const loader = document.querySelector('.intro-loader');
     const logo = document.querySelector('.intro-logo');
     const path = window.location.pathname.replace(/\/+$/, ''); // supprime les / finaux
-    const isHomePage = path === '' || path === '/index.html';
-    
+    const isHomePage = path.endsWith('/') || path.endsWith('/index.html');
+
     if (loader && logo && isHomePage) {
         setTimeout(() => {
             logo.style.transition = 'all 0.6s ease';
@@ -640,6 +640,6 @@ document.addEventListener('DOMContentLoaded', function () {
             }, 600);
         }, 1000); 
     } else if (loader) {
-        loader.style.display = 'none';
+        loader.remove();
     }
 });
