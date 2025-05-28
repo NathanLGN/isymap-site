@@ -621,8 +621,10 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('DOMContentLoaded', function () {
     const loader = document.querySelector('.intro-loader');
     const logo = document.querySelector('.intro-logo');
-
-    if (loader && logo) {
+    const path = window.location.pathname.replace(/\/+$/, ''); // supprime les / finaux
+    const isHomePage = path === '' || path === '/index.html';
+    
+    if (loader && logo && isHomePage) {
         setTimeout(() => {
             logo.style.transition = 'all 0.6s ease';
             logo.style.transform = 'translateY(-50px)';
@@ -637,5 +639,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 }, 500);
             }, 600);
         }, 1000); 
-    } 
+    } else if (loader) {
+        loader.style.display = 'none';
+    }
 });
