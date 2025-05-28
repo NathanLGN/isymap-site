@@ -621,29 +621,21 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('DOMContentLoaded', function () {
     const loader = document.querySelector('.intro-loader');
     const logo = document.querySelector('.intro-logo');
-    const isHome = document.body.classList.contains('home-template');
 
     if (loader && logo) {
         setTimeout(() => {
-            // Animation du logo (monte et disparaît)
             logo.style.transition = 'all 0.6s ease';
             logo.style.transform = 'translateY(-50px)';
             logo.style.opacity = '0';
 
-            // Disparition du fond blanc après le logo
             setTimeout(() => {
                 loader.style.transition = 'opacity 0.5s ease';
                 loader.style.opacity = '0';
 
-                // Supprimer complètement le loader après fondu
                 setTimeout(() => {
                     loader.style.display = 'none';
                 }, 500);
             }, 600);
-        }, 1000); // Temps d'attente avant démarrage (facultatif)
+        }, 1000); 
     } 
-    else if (loader) {
-        // Supprime immédiatement le loader sur les autres pages
-        loader.remove();
-    }
 });
