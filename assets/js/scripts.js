@@ -641,7 +641,9 @@ document.addEventListener('DOMContentLoaded', function () {
             }, 600);
         }, 1000); 
     } else if (loader) {
-        loader.remove();
-        document.body.classList.replace('loading-page-template', 'page-template');
+        if (loader) loader.remove();
+        setTimeout(() => {
+            document.body.classList.replace('loading-page-template', 'page-template');
+        }, 1);  
     }
 });
