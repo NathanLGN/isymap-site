@@ -625,7 +625,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const isHomePage = path.endsWith('/') || path.endsWith('/index.html');
 
     if (loader && logo && isHomePage) {
-        document.body.classList.remove('loading-page-template');
+        document.body.classList.replace('loading-page-template', 'page-template');
         setTimeout(() => {
             logo.style.transition = 'all 0.6s ease';
             logo.style.transform = 'translateY(-50px)';
@@ -642,6 +642,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }, 1000); 
     } else if (loader) {
         loader.remove();
-        document.body.classList.remove('loading-page-template');
+        document.body.classList.replace('loading-page-template', 'page-template');
     }
 });
