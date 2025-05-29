@@ -2326,6 +2326,10 @@ header {
   width: 300px;
 }
 
+body.loading > *:not(.intro-loader) {
+  display: none !important;
+}
+
 /* 
  * Ajout de css footer
  */
