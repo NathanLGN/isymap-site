@@ -2326,7 +2326,7 @@ header {
   width: 300px;
 }
 
-body.loading > *:not(.intro-loader) {
+body.loading-page-template > *:not(.intro-loader) {
   display: none !important;
 }
 

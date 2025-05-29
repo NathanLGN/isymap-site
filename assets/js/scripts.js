@@ -625,6 +625,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const isHomePage = path.endsWith('/') || path.endsWith('/index.html');
 
     if (loader && logo && isHomePage) {
+        document.body.classList.remove('loading-page-template');
         setTimeout(() => {
             logo.style.transition = 'all 0.6s ease';
             logo.style.transform = 'translateY(-50px)';
@@ -636,12 +637,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 setTimeout(() => {
                     loader.style.display = 'none';
-                    document.body.classList.remove('loading');
                 }, 500);
             }, 600);
         }, 1000); 
     } else if (loader) {
         loader.remove();
-        document.body.classList.remove('loading');
+        document.body.classList.remove('loading-page-template');
     }
 });
