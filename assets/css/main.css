@@ -2906,7 +2906,7 @@ figure {
 
 .home-map-link {
   position: absolute;
-  z-index: 1;
+  z-index: 2;
   cursor: pointer;
 }
 
@@ -3062,12 +3062,13 @@ figure {
 
 .home-map-link-7 {
   top: 57%;
-    left: 71%;
+  left: 71%;
 }
 
 .home-map-link-8 {
   top: 30%;
-    left: 44%;
+  left: 44%;
+  z-index: 1;
 }
 
 .home-map-link-9 {
@@ -3083,7 +3084,7 @@ figure {
 .home-map-quote-container {
   position: static;
   top: 0;
-    left: 0;	
+  left: 0;	
 }
 
 @media screen and (min-width: 1024px) {
@@ -3122,7 +3123,7 @@ figure {
 }
 
 .home-map-quote::before {
-  content: url('./img/home-map-quote.png');
+  content: url('../../media/posts/1/home-map-quote.png');
   position: absolute;
   width: 109px;
   height: 84px;
