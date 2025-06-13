@@ -2679,7 +2679,47 @@ endless-waves-survival
   padding-left: 15px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
+  .accueil-presentation {
+    max-width: 1150px ;
+  }
+
+  .text-presentation, .image-presentation {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .container-solutions-produits {
+    max-width: 1150px ;
+  }
+
+  .groupe-galerie-solutions-produits {
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .accueil-presentation {
+    max-width: 960px ;
+  }
+
+  .text-presentation, .image-presentation {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .container-solutions-produits {
+    max-width: 960px ;
+  }
+
+  .groupe-galerie-solutions-produits {
+    flex: 0 0 33.333333333333%;
+    max-width: 33.333333333333%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
   .accueil-presentation {
     max-width: 720px;
   }
@@ -2690,11 +2730,20 @@ endless-waves-survival
   }
 
   .container-solutions-produits {
-    max-width: 720px !important;
+    max-width: 720px ;
+  }
+
+  .groupe-galerie-solutions-produits {
+    flex: 0 0 50%;
+    max-width: 50%;
   }
 }
 
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  .accueil-presentation {
+    max-width: 540px;
+  }
+
   .container-solutions-produits {
     max-width: 540px;
   }
@@ -2906,7 +2955,7 @@ figure {
 
 .home-map-link {
   position: absolute;
-  z-index: 2;
+  z-index: 4;
   cursor: pointer;
 }
 
@@ -3032,7 +3081,8 @@ figure {
 
 .home-map-link-2 {
   top: 35%;
-  left: 21.5%;		
+  left: 21.5%;	
+  z-index: 2;	
 }
 
 .home-map-link-2 .home-map-link-popup {
@@ -3042,12 +3092,20 @@ figure {
 
 .home-map-link-3 {
   top: 56%;
-    left: 33%;
+  left: 33%;
+  z-index: 3;
 }
 
 .home-map-link-4 {
   top: 47.1%;
   left: 40%;
+  z-index: 2;
+}
+
+@media screen and (max-width: 1150px) {
+  .home-map-link-5 > .home-map-link-popup {
+    left: 30px !important;
+  }
 }
 
 .home-map-link-5 {
@@ -3058,6 +3116,7 @@ figure {
 .home-map-link-6 {
   top: 62%;
   left: 44%;
+  z-index: 3;
 }
 
 .home-map-link-7 {
@@ -3079,6 +3138,7 @@ figure {
 .home-map-link-10 {
   top: 70%;
   left: 50.5%;
+  z-index: 3;
 }
 
 .home-map-quote-container {
