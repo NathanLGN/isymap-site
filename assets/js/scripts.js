@@ -646,4 +646,50 @@ document.addEventListener('DOMContentLoaded', function () {
             document.body.classList.replace('loading-page-template', 'page-template');
         }, 1);  
     }
+
+    anime({
+        targets: '.home-hero-logo',
+        opacity: [0, 1],
+        duration: 2000,
+        easing: 'linear'
+    });
+
+    $(".home-hero .home-hero-word-6").addClass("is-animating");
+    $(".home-hero .home-hero-word-7").addClass("is-animating");
+    $(".home-hero .home-hero-word-2").addClass("is-animating");
+    $(".home-hero .home-hero-word-10").addClass("is-animating");
+    $(".home-hero .home-hero-word-4").addClass("is-animating");
+    $(".home-hero .home-hero-word-8").addClass("is-animating");
+    $(".home-hero .home-hero-word-3").addClass("is-animating");
+    $(".home-hero .home-hero-word-5").addClass("is-animating");
+    $(".home-hero .home-hero-word-1").addClass("is-animating");
+    $(".home-hero .home-hero-word-9").addClass("is-animating");
+
+
+        
+    setInterval(() => {
+        $(".home-hero .home-hero-word-6").removeClass("is-animating");
+        $(".home-hero .home-hero-word-7").removeClass("is-animating");
+        $(".home-hero .home-hero-word-2").removeClass("is-animating");
+        $(".home-hero .home-hero-word-10").removeClass("is-animating");
+        $(".home-hero .home-hero-word-4").removeClass("is-animating");
+        $(".home-hero .home-hero-word-8").removeClass("is-animating");
+        $(".home-hero .home-hero-word-3").removeClass("is-animating");
+        $(".home-hero .home-hero-word-5").removeClass("is-animating");
+        $(".home-hero .home-hero-word-1").removeClass("is-animating");
+        $(".home-hero .home-hero-word-9").removeClass("is-animating");
+        setTimeout(() => {
+            $(".home-hero .home-hero-word-6").addClass("is-animating");
+            $(".home-hero .home-hero-word-7").addClass("is-animating");
+            $(".home-hero .home-hero-word-2").addClass("is-animating");
+            $(".home-hero .home-hero-word-10").addClass("is-animating");
+            $(".home-hero .home-hero-word-4").addClass("is-animating");
+            $(".home-hero .home-hero-word-8").addClass("is-animating");
+            $(".home-hero .home-hero-word-3").addClass("is-animating");
+            $(".home-hero .home-hero-word-5").addClass("is-animating");
+            $(".home-hero .home-hero-word-1").addClass("is-animating");
+            $(".home-hero .home-hero-word-9").addClass("is-animating");
+        }, 100);
+
+    }, 10950);
 });
