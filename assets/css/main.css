@@ -2598,13 +2598,12 @@ address {
 
 .home-hero .home-hero-word {
   position: absolute;
-  overflow: hidden;
-  z-index: 500;
-  filter: blur(0px);
-  transform: perspective(300px) translateZ(0px);
   opacity: 0;
-  backface-visibility: hidden;
-  display: none;
+  transform: perspective(300px) translateZ(0px);
+  animation-name: show;
+  animation-duration: 11s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
 }
 
 .home-hero-word-1 {
@@ -2667,24 +2666,49 @@ address {
   animation-delay: 8s !important;
 }
 
+@keyframes show {
+  0%   {opacity:0;}
+  5%  {opacity:0.1;}
+  6%  {opacity:0.1;}
+  7%  {opacity:0.15;}
+  8%  {opacity:0.2;}
+  9%  {opacity:0.25;}
+  10%  {opacity:0.3;}
+  11%  {opacity:0.35;}
+  12%  {opacity:0.4;}
+  13%  {opacity:0.45;}
+  14%  {opacity:0.5;}
+  15%  {opacity:0.6;}
+  16%  {opacity:0.7;}
+  17%  {opacity:0.8;}
+  18%  {opacity:0.9;}
+  19%  {opacity:1;}
+  20%  {opacity:0.3;}
+  21%  {opacity:0.2;}
+  22%  {opacity:0.1;}
+  23%  {opacity:0;}
+  24%  {opacity:0;}
+  25%  {opacity:0;}
+  100% {opacity:0;}
+}
+
 .home-hero-logo {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%)s;
   max-width: 280px;
 }
 
-@media screen and (min-width: 768px) {
-  .home-hero .home-hero-word.is-animating {
-    animation: blursvg 3s linear 1;
-    animation-delay: 0s;
+@media screen and (max-width: 767px) {
+  .home-hero .home-hero-word {
+    display: none;
   }
+} 
 
+@media screen and (min-width: 768px) {
    .home-hero .home-hero-word {
     display: block;
-    opacity: 0;
-    animation: blursvg 3s linear 1;
   }
 
    .home-hero-logo {
@@ -2694,7 +2718,7 @@ address {
 
 @media screen and (min-width: 991px) {
   .home-hero {
-    height: 75vh;
+    height: 50vh;
   }
 }
 
