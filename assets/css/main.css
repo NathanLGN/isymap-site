@@ -2513,7 +2513,7 @@ address {
 
 .footer__custom-menu nav ul li a {
   color: #212648;
-}
+}  
 
 .footer__custom-menu nav ul li :hover {
   color: #79c7de;
@@ -2616,6 +2616,7 @@ address {
   top: 7%;
   left: 42%;
   animation-delay: 8s !important;
+  
 }
 
 .home-hero-word-3 {
@@ -2668,25 +2669,25 @@ address {
 
 @keyframes show {
   0%   {opacity:0;}
-  5%  {opacity:0.1;}
-  6%  {opacity:0.1;}
-  7%  {opacity:0.15;}
-  8%  {opacity:0.2;}
-  9%  {opacity:0.25;}
-  10%  {opacity:0.3;}
-  11%  {opacity:0.35;}
-  12%  {opacity:0.4;}
-  13%  {opacity:0.45;}
-  14%  {opacity:0.5;}
-  15%  {opacity:0.6;}
-  16%  {opacity:0.7;}
-  17%  {opacity:0.8;}
-  18%  {opacity:0.9;}
-  19%  {opacity:1;}
-  20%  {opacity:0.3;}
-  21%  {opacity:0.2;}
-  22%  {opacity:0.1;}
-  23%  {opacity:0;}
+  5%  {opacity:0.1; filter: blur(0px); transform: perspective(600px) scale(0.55); }
+  6%  {opacity:0.1; filter: blur(0px); transform: perspective(600px) scale(0.575); }
+  7%  {opacity:0.15; filter: blur(0px); transform: perspective(600px) scale(0.6); }
+  8%  {opacity:0.2; filter: blur(0px); transform: perspective(600px) scale(0.625); }
+  9%  {opacity:0.25; filter: blur(0px); transform: perspective(600px) scale(0.65); }
+  10%  {opacity:0.3; filter: blur(0px); transform: perspective(600px) scale(0.675); }
+  11%  {opacity:0.35; filter: blur(0px); transform: perspective(600px) scale(0.7); }
+  12%  {opacity:0.4; filter: blur(0px); transform: perspective(600px) scale(0.725); }
+  13%  {opacity:0.45; filter: blur(0px); transform: perspective(600px) scale(0.75); }
+  14%  {opacity:0.5; filter: blur(0px); transform: perspective(600px) scale(0.775); }
+  15%  {opacity:0.6; filter: blur(0px); transform: perspective(600px) scale(0.8); }
+  16%  {opacity:0.7; filter: blur(0px); transform: perspective(600px) scale(0.825); }
+  17%  {opacity:0.8; filter: blur(0px); transform: perspective(600px) scale(0.85); }
+  18%  {opacity:0.9; filter: blur(0px); transform: perspective(600px) scale(0.875); }
+  19%  {opacity:1; filter: blur(0px); transform: perspective(600px) scale(0.9); }
+  20%  {opacity:0.5; filter: blur(1px); transform: perspective(600px) scale(0.925); }
+  21%  {opacity:0.35; filter: blur(2px); transform: perspective(600px) scale(0.95); }
+  22%  {opacity:0.2; filter: blur(3px); transform: perspective(600px) scale(0.975); }
+  23%  {opacity:0.1; filter: blur(4px); transform: perspective(600px) scale(1); }
   24%  {opacity:0;}
   25%  {opacity:0;}
   100% {opacity:0;}
