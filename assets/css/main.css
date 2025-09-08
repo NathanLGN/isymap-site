@@ -2697,7 +2697,7 @@ address {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%)s;
+  transform: translate(-50%, -50%);
   max-width: 280px;
 }
 
@@ -2719,7 +2719,7 @@ address {
 
 @media screen and (min-width: 991px) {
   .home-hero {
-    height: 50vh;
+    height: 75vh;
   }
 }
 
