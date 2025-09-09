@@ -2616,7 +2616,6 @@ address {
   top: 7%;
   left: 42%;
   animation-delay: 8s !important;
-  
 }
 
 .home-hero-word-3 {
@@ -2719,7 +2718,7 @@ address {
 
 @media screen and (min-width: 991px) {
   .home-hero {
-    height: 75vh;
+    height: 75dvh;
   }
 }
 
