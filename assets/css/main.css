@@ -3862,7 +3862,7 @@ figure {
   }
 }
 
-/* produits */
+/* produits et logiciels */
 
 .produit-container {
   margin-top: 100px;
@@ -3899,6 +3899,15 @@ figure {
 
 .container-order p {
   line-height: 24px;
+}
+
+.container-order a {
+  color: #79c7de;
+  text-decoration: underline;
+}
+
+.container-order a:hover {
+  color: #55565a;
 }
 
 .produit-titre-container {
