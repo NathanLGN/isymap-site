@@ -4341,6 +4341,171 @@ figure {
   }
 }
 
+/* nos reussites */
+
+.h3-nos-reussites {
+  font: 500 55px/1em "Poppins", sans-serif;
+  color: #212648;
+  margin-top: 0;
+  margin-bottom: 1em;
+  position: relative;
+}
+
+.h3-nos-reussites::after {
+  position: absolute;
+  content: "";
+  height: 6px;
+  width: 42px;
+  background-color: #212648;
+  border-radius: 50px;
+  left: 0;
+  bottom: -25px;
+}
+
+.container-nos-reussites-groupe, .container-references-groupe {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.container-nos-reussites, .container-references {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-bottom: 25px;
+}
+
+.nos-reussites-item {
+  margin-bottom: 25px;
+  height: 100%;
+  min-height: 350px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.nos-reussites-item-content {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 60px 15px 15px 15px;
+}
+
+.nos-reussites-item-content-image-container {
+  height: 170px;
+  display: flex;
+  align-items: center;
+}
+
+.nos-reussites-item-content-image img {
+  display: block;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.nos-reussites-item-content-titre {
+  font: 700 30px/1em "Poppins", sans-serif;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 5px;
+  position: relative;
+  padding-top: 20px;
+}
+
+.nos-reussites-item-content-titre::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  height: 6px;
+  width: 42px;
+  background-color: #fff;
+  transform: translateX(-50%);
+  border-radius: 100px;
+}
+
+.nos-reussites-item-content p {
+  text-align: center;
+  color: #fff;
+  font: 400 15px/1em "Ubuntu", sans-serif;
+}
+
+.nos-reussites-gollum-text-container {
+  display: flex;
+  margin-top: 0.5rem;
+  align-items: center;
+  flex-direction: column;
+}
+
+.nos-reussites-gollum-text {
+  color: #79c7de;
+  font-weight: 700;
+  text-align: center;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.nos-reussites-item-content-image-bas-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.nos-reussites-item-content-image-bas img {
+  margin-left: 0.5rem;
+}
+
+.nos-reussites-item-content-picto img {
+  position: absolute;
+  width: 50px;
+  top: 15px;
+  right: 15px;
+}
+
+.nos-reussites-item-content a {
+  color: #79c7de;
+  text-decoration: underline;
+}
+
+.nos-reussites-item-content a:hover {
+  color: #55565a;
+}
+
+@media (min-width: 576px) {
+  .container-nos-reussites, .container-references {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .container-nos-reussites, .container-references {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@media (min-width: 992px) {
+  .container-nos-reussites, .container-references {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container-nos-reussites, .container-references {
+    flex: 0 0 33.3333333333%;
+    max-width: 33.3333333333%;
+  }
+}
+
 /* la société */
 
 .mb-5 {
