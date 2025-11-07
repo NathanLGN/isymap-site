@@ -2,10 +2,10 @@
     "version": "https://jsonfeed.org/version/1",
     "title": "ISYmap",
     "description": "",
-    "home_page_url": "https://nathanlgn.github.io/isymap-site/en",
-    "feed_url": "https://nathanlgn.github.io/isymap-site/en/feed.json",
+    "home_page_url": "https://nathanlgn.github.io/isymap-site",
+    "feed_url": "https://nathanlgn.github.io/isymap-site/feed.json",
     "user_comment": "",
-    "icon": "https://nathanlgn.github.io/isymap-site/en/media/website/logo.svg",
+    "icon": "https://nathanlgn.github.io/isymap-site/media/website/logo.svg",
     "author": {
         "name": "Nathan"
     },
