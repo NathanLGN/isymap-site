@@ -647,3 +647,311 @@ document.addEventListener('DOMContentLoaded', function () {
         }, 1);  
     }
 });
+
+/* Barre d'avencement */
+
+document.addEventListener('DOMContentLoaded', function () {
+  var progressHeightMin = 50;
+
+  var progressWrap = document.createElement('div');
+  progressWrap.className = 'reading-progress fixed';
+
+  var progressBar = document.createElement('div');
+  progressBar.className = 'reading-progress__bar';
+  progressWrap.appendChild(progressBar);
+
+  document.body.appendChild(progressWrap);
+
+  var ticking = false;
+
+  function updateProgress() {
+    var doc = document.documentElement;
+    var scrollTop = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
+    var scrollHeight = Math.max(
+      document.body.scrollHeight, document.documentElement.scrollHeight,
+      document.body.offsetHeight, document.documentElement.offsetHeight,
+      document.body.clientHeight, document.documentElement.clientHeight
+    );
+    var clientHeight = window.innerHeight;
+    var maxScroll = scrollHeight - clientHeight;
+
+    if (maxScroll < progressHeightMin) {
+      progressWrap.classList.add('hidden');
+      progressBar.style.width = '0%';
+      return;
+    } else {
+      progressWrap.classList.remove('hidden');
+    }
+
+    var percent = Math.min(100, (scrollTop / maxScroll) * 100);
+    progressBar.style.width = percent + "%";
+
+    ticking = false;
+  }
+
+  window.addEventListener('scroll', function () {
+    if (!ticking) {
+      window.requestAnimationFrame(updateProgress);
+      ticking = true;
+    }
+  }, { passive: true });
+
+  window.addEventListener('resize', updateProgress);
+  window.addEventListener('load', function () {
+    setTimeout(updateProgress, 50);
+  });
+
+  updateProgress();
+});
+
+/**
+ * Intégration du formulaire de contact avec l'API
+ * Pour le site ISYmap
+ *
+ * À ajouter dans votre fichier HTML ou scripts.min.js
+ */
+
+// Configuration de l'API
+const CONTACT_API_URL = "https://mailapi.isymap.com/";
+
+// État du formulaire
+let isSubmitting = false;
+
+// Fonction d'initialisation au chargement de la page
+document.addEventListener('DOMContentLoaded', function() {
+    const contactForm = document.getElementById('contact-form');
+
+    if (contactForm) {
+        console.log('Formulaire de contact détecté - Initialisation...');
+
+        // Empêcher le comportement par défaut du formulaire
+        contactForm.addEventListener('submit', handleFormSubmit);
+    }
+});
+
+/**
+ * Gestion de la soumission du formulaire
+ */
+async function handleFormSubmit(event) {
+    event.preventDefault(); // Empêcher le rechargement de la page
+
+    // Éviter les doubles soumissions
+    if (isSubmitting) {
+        console.log('Soumission déjà en cours...');
+        return;
+    }
+
+    const form = event.target;
+    const submitButton = form.querySelector('.contact-from-envoyer');
+    const originalButtonText = submitButton.textContent;
+
+    // Récupérer les données du formulaire
+    const formData = {
+        name: form.nom.value.trim(),
+        email: form.email.value.trim(),
+        subject: `Contact depuis le site ISYmap`,
+        message: constructMessage(form)
+    };
+
+    // Validation côté client
+    if (!validateForm(formData)) {
+        return;
+    }
+
+    // Désactiver le bouton et afficher un loader
+    isSubmitting = true;
+    submitButton.disabled = true;
+    submitButton.textContent = 'Envoi en cours...';
+    submitButton.classList.add('loading');
+
+    try {
+        // Envoi de la requête à l'API
+        const response = await fetch(`${CONTACT_API_URL}contact`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData)
+        });
+
+        const data = await response.json();
+
+        if (response.ok) {
+            // Succès
+            showSuccessMessage();
+            form.reset();
+        } else {
+            // Erreur de validation ou contenu suspect
+            if (response.status === 400) {
+                showErrorMessage('Votre message n\'a pas pu être envoyé. Veuillez vérifier le contenu et réessayer.');
+            } else if (response.status === 422) {
+                showErrorMessage('Certains champs ne sont pas correctement remplis. Veuillez vérifier vos informations.');
+            } else {
+                showErrorMessage('Une erreur est survenue lors de l\'envoi. Veuillez réessayer plus tard.');
+            }
+            console.error('Erreur API:', data);
+        }
+
+    } catch (error) {
+        // Erreur réseau ou autre
+        console.error('Erreur lors de l\'envoi:', error);
+        showErrorMessage('Impossible de contacter le serveur. Veuillez vérifier votre connexion internet et réessayer.');
+    } finally {
+        // Réactiver le bouton
+        isSubmitting = false;
+        submitButton.disabled = false;
+        submitButton.textContent = originalButtonText;
+        submitButton.classList.remove('loading');
+    }
+}
+
+/**
+ * Construire le message complet avec tous les champs
+ */
+function constructMessage(form) {
+    const nom = form.nom.value.trim();
+    const prenom = form.prenom.value.trim();
+    const societe = form.societe.value.trim();
+    const message = form.message.value.trim();
+
+    let fullMessage = '';
+
+    // Informations de contact
+    if (nom || prenom) {
+        fullMessage += `Nom complet: ${nom}${prenom ? ' ' + prenom : ''}\n`;
+    }
+
+    if (societe) {
+        fullMessage += `Société: ${societe}\n`;
+    }
+
+    fullMessage += '\n--- Message ---\n\n';
+    fullMessage += message;
+
+    return fullMessage;
+}
+
+/**
+ * Validation côté client
+ */
+function validateForm(formData) {
+    // Vérifier que les champs requis sont remplis
+    if (!formData.name || formData.name.length < 2) {
+        showErrorMessage('Le nom doit contenir au moins 2 caractères.');
+        return false;
+    }
+
+    if (!formData.email || !isValidEmail(formData.email)) {
+        showErrorMessage('Veuillez entrer une adresse email valide.');
+        return false;
+    }
+
+    if (!formData.message || formData.message.length < 10) {
+        showErrorMessage('Le message doit contenir au moins 10 caractères.');
+        return false;
+    }
+
+    return true;
+}
+
+/**
+ * Validation du format email
+ */
+function isValidEmail(email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+}
+
+/**
+ * Afficher un message de succès
+ */
+function showSuccessMessage() {
+    const form = document.getElementById('contact-form');
+    const formContainer = form.closest('.contact-form-container');
+
+    // Créer le message de succès
+    const successMessage = document.createElement('div');
+    successMessage.className = 'contact-success-message';
+    successMessage.innerHTML = `
+        <div class="alert alert-success" role="alert">
+            <h4>✅ Message envoyé avec succès !</h4>
+            <p>Merci de nous avoir contactés. Nous vous répondrons dans les plus brefs délais.</p>
+        </div>
+    `;
+
+    // Insérer le message avant le formulaire
+    formContainer.insertBefore(successMessage, form);
+
+    // Faire défiler vers le message
+    successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+    // Masquer le formulaire temporairement
+    form.style.opacity = '0.5';
+
+    // Supprimer le message après 10 secondes
+    setTimeout(() => {
+        successMessage.remove();
+        form.style.opacity = '1';
+    }, 10000);
+}
+
+/**
+ * Afficher un message d'erreur
+ */
+function showErrorMessage(message) {
+    const form = document.getElementById('contact-form');
+    const formContainer = form.closest('.contact-form-container');
+
+    // Supprimer les anciens messages d'erreur
+    const oldErrors = formContainer.querySelectorAll('.contact-error-message');
+    oldErrors.forEach(error => error.remove());
+
+    // Créer le message d'erreur
+    const errorMessage = document.createElement('div');
+    errorMessage.className = 'contact-error-message';
+    errorMessage.innerHTML = `
+        <div class="alert alert-danger" role="alert">
+            <h4>❌ Erreur</h4>
+            <p>${message}</p>
+        </div>
+    `;
+
+    // Insérer le message avant le formulaire
+    formContainer.insertBefore(errorMessage, form);
+
+    // Faire défiler vers le message
+    errorMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+    // Supprimer le message après 8 secondes
+    setTimeout(() => {
+        errorMessage.remove();
+    }, 8000);
+}
+
+/**
+ * Vérifier la disponibilité de l'API (optionnel)
+ */
+async function checkAPIHealth() {
+    try {
+        const response = await fetch(`${CONTACT_API_URL}/health`, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        });
+
+        if (response.ok) {
+            console.log('✅ API de contact disponible');
+            return true;
+        } else {
+            console.warn('⚠️ API de contact ne répond pas correctement');
+            return false;
+        }
+    } catch (error) {
+        console.error('❌ API de contact inaccessible:', error);
+        return false;
+    }
+}
+
+// Vérifier l'API au chargement (optionnel - pour debug)
+// checkAPIHealth();

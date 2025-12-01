@@ -4663,27 +4663,13 @@ hr {
 }
 
 .contact-form-contennu-groupe-container {
-  background: none;
-  border: 0 none;
-  -webkit-border-radius: 0;
-  float: none;
   font-size: 100%;
-  height: auto;
   letter-spacing: normal;
   list-style: none;
-  outline: none;
-  position: static;
-  text-decoration: none;
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  width: auto;
   visibility: visible;
-  overflow: visible;
-  margin: 0;
-  padding: 0;
-  -moz-box-sizing: border-box;
-  box-shadow: none;
 }
 
 .contact-form-contennu-container {
@@ -4692,13 +4678,8 @@ hr {
 }
 
 .contact-form label:not(.contact-from-checkbox-label) {
-  left: 0 !important;
-  top: 20px !important;
-  z-index: 10 !important;
   color: #55565a !important;
   font-weight: 300 !important;
-  font-family: "Ubuntu", sans-serif !important;
-  transition: transform 150ms ease-out, font-size 150ms ease-out, color 150ms ease-out !important;
   line-height: 1em !important;
   font-size: 20px !important;
   border: 0;
@@ -4709,8 +4690,6 @@ hr {
   word-break: break-word;
   word-wrap: break-word;
   background: none;
-  height: auto;
-  box-sizing: border-box;
 }
 
 .requis-form {
@@ -4719,57 +4698,27 @@ hr {
 }
 
 .contact-form input {
-  -moz-box-sizing: border-box;
-  float: none;
-  max-width: 100%;
-  display: block !important;
-  margin-bottom: 0px !important;
-  background-color: transparent !important;
   width: 100% !important;
-  position: relative !important;
   padding: 7px 0px 5px 0 !important;
   outline: 0 !important;
   border: 0 !important;
   box-shadow: 0 1px 0 0 #ddddde !important;
-  transition: box-shadow 150ms ease-out !important;
   height: calc(1.5em + 0.75rem + 2px) !important;
-  line-height: 1.5 !important;
-  border-radius: 0px !important;
-  color: #55565a !important;
   font-size: 16px !important;
   font-weight: 300 !important;
-  font-family: "Ubuntu", sans-serif !important;
-  margin: 0;
-  background: none;
-  letter-spacing: normal;
   list-style: none;
   text-decoration: none;
-  text-indent: 0;
-  text-shadow: none;
-  text-transform: none;
-  visibility: visible;
-  overflow: visible;
+  color: #55565a !important;
 }
 
 .contact-form textarea {
-  resize: vertical;
-  -moz-box-sizing: border-box;
-  float: none;
-  max-width: 100%;
-  margin: 0;
-  background: none;
   min-height: 180px !important;
   max-height: 600px !important;
-  display: block !important;
-  margin-bottom: 0px !important;
-  background-color: transparent !important;
   width: 100% !important;
-  position: relative !important;
   padding: 7px 0px 5px 0 !important;
   outline: 0 !important;
   border: 0 !important;
   box-shadow: 0 1px 0 0 #ddddde !important;
-  transition: box-shadow 150ms ease-out !important;
   height: calc(1.5em + 0.75rem + 2px) !important;
   line-height: 1.5 !important;
   border-radius: 0px !important;
@@ -5046,4 +4995,147 @@ article.page p + h2, article.page p + h3, article.page p + h4, article.page p + 
     padding-right: 40px;
     padding-left: 40px;
   }
+}
+
+/* Page Image du thème */
+
+.page-images-du-theme {
+  display: none;
+}
+
+/* barre d'avancement */
+
+.reading-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  z-index: 999999; 
+  background: transparent;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.reading-progress__bar {
+  width: 0%;
+  height: 100%;
+  background: #79c7de;
+  transform-origin: left center;
+  transition: width 120ms linear;
+}
+
+.reading-progress.hidden {
+  display: none;
+}
+
+/**
+ * Styles pour les messages de succès et d'erreur du formulaire de contact
+ * À ajouter dans votre fichier CSS principal
+ */
+
+/* Messages de succès et d'erreur */
+.contact-success-message,
+.contact-error-message {
+    margin-bottom: 20px;
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Style Bootstrap Alert personnalisé (si Bootstrap n'est pas chargé) */
+.alert {
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.alert h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.alert p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.alert-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+.alert-danger {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+/* État de chargement du bouton */
+.contact-from-envoyer.loading {
+    position: relative;
+    color: transparent;
+    pointer-events: none;
+}
+
+.contact-from-envoyer.loading::after {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 50%;
+    left: 50%;
+    margin-left: -8px;
+    margin-top: -8px;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: spinner 0.6s linear infinite;
+}
+
+@keyframes spinner {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Amélioration du bouton désactivé */
+.contact-from-envoyer:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Animation de transition pour le formulaire */
+.contact-form {
+    transition: opacity 0.3s ease;
+}
+
+/* Responsive - Messages sur mobile */
+@media (max-width: 768px) {
+    .alert {
+        padding: 12px 15px;
+    }
+
+    .alert h4 {
+        font-size: 16px;
+    }
+
+    .alert p {
+        font-size: 13px;
+    }
 }
