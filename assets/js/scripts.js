@@ -746,7 +746,6 @@ async function handleFormSubmit(event) {
     const originalButtonText = submitButton.textContent;
     // ---- reCAPTCHA v3 ----
     const recaptchaToken = await grecaptcha.execute('6Lek4CAsAAAAAMJmjs-21-JBevAZTk21Jy35f5aP', { action: 'contact' });
-    console.log('Token reCAPTCHA v3 généré :', recaptchaToken);
 
     // Récupérer les données du formulaire
     const formData = {
