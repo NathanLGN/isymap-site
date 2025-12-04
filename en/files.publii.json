@@ -2,7 +2,7 @@
     {
         "path": "404.html",
         "type": "file",
-        "md5": "33a0153fb1ffb21f2913bd2921f563c7"
+        "md5": "9bbb8cf953d7d2aae9266090f6a7b839"
     },
     {
         "path": "assets",
@@ -82,42 +82,32 @@
     {
         "path": "/authors/nathan/index.html",
         "type": "file",
-        "md5": "f71bb1d003f099cdbf05ffb6cdbc21a4"
+        "md5": "0f61f4d349c80a63e0bec1a13abd67c6"
     },
     {
         "path": "contact.html",
         "type": "file",
-        "md5": "36f9cdffc695f57b41343462c95b8c3b"
+        "md5": "c5c2f2309ac15179f081fe3113d58c8b"
     },
     {
         "path": "cookies.html",
         "type": "file",
-        "md5": "b2c544810b6a1244b6411c0f69a654a0"
+        "md5": "a6f1adfbb6c5218b1d0a4213dd7aee1f"
     },
     {
         "path": "credits.html",
         "type": "file",
-        "md5": "775586f290a584b7a0365bfa90e5d88a"
-    },
-    {
-        "path": "feed.json",
-        "type": "file",
-        "md5": "9eb6a99c9e4f8b21934635957231043d"
-    },
-    {
-        "path": "feed.xml",
-        "type": "file",
-        "md5": "862712d6fd47b4befc42d9b3725da9a9"
+        "md5": "ef030e60e05e023825008267da7c16cf"
     },
     {
         "path": "images-du-theme.html",
         "type": "file",
-        "md5": "21b0b8f9b9e2fee2c106b4a749212182"
+        "md5": "8ee41455f892d510966d8026b9aacaa4"
     },
     {
         "path": "index.html",
         "type": "file",
-        "md5": "dbf4e0823202af74563ac000eb9a56d1"
+        "md5": "ea11e9068b20b25e989ad79cbff3ad4a"
     },
     {
         "path": "ISYmap-PLAN-DEGALITE-DES-GENRES-2024-2026_1.pdf",
@@ -127,12 +117,12 @@
     {
         "path": "la-societe.html",
         "type": "file",
-        "md5": "87553240a2e082e6370eab19b2dbf5ee"
+        "md5": "f1da08fc9ff8c907f9375bec426d34a0"
     },
     {
         "path": "logiciels.html",
         "type": "file",
-        "md5": "dd6b2a8993a617ac224c98a452d1d7b6"
+        "md5": "bab99bdea1f78bc09398ebbc25905e3e"
     },
     {
         "path": "media",
@@ -932,42 +922,32 @@
     {
         "path": "mentions-legales.html",
         "type": "file",
-        "md5": "d74f772747c8268a8df57f2edc5babb2"
+        "md5": "a08a6e00b08f467efdc12421d6290327"
     },
     {
         "path": "nos-reussites.html",
         "type": "file",
-        "md5": "07a566c851ce01e5be4b62ffc1aebdf6"
+        "md5": "b1a503fe549f5506da2710001cb0b1cf"
     },
     {
         "path": "politique-de-confidentialite.html",
         "type": "file",
-        "md5": "ff02cc14b0b378b2d8423d0b07c34939"
+        "md5": "390f36deaf3ecd9069828324e2bc268d"
     },
     {
         "path": "produits.html",
         "type": "file",
-        "md5": "107aa5b47c2dfbe49379a3999929e401"
+        "md5": "87ccd0bfd2223b23e6b641c2a760e33a"
     },
     {
         "path": "robots.txt",
         "type": "file",
-        "md5": "f00044bd338963a10647a7dead2d333e"
-    },
-    {
-        "path": "sitemap.xml",
-        "type": "file",
-        "md5": "8b43e9578c1bfc9ad285b8c1b68178a3"
-    },
-    {
-        "path": "sitemap.xsl",
-        "type": "file",
-        "md5": "03c2f9a7fdcc46ff05c435907614a0b8"
+        "md5": "b6216d61c03e6ce0c9aea6ca7808f7ca"
     },
     {
         "path": "solutions.html",
         "type": "file",
-        "md5": "3a0a2ea65f36f77b4120d4aff09b9b8f"
+        "md5": "1cee0571af2d3c8bdcf485380ca32c7b"
     },
     {
         "path": "tags",
@@ -977,6 +957,6 @@
     {
         "path": "/tags/index.html",
         "type": "file",
-        "md5": "4c745f20fe4a7772296391b6479f69da"
+        "md5": "5ade9de465ac7eef20bd20f7f3bb0228"
     }
 ]

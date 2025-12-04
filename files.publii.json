@@ -2,7 +2,7 @@
     {
         "path": "404.html",
         "type": "file",
-        "md5": "b201bc16bd5123400eb5642343a5dffa"
+        "md5": "bc9c07bb12c096fb610b3eb0860a86d9"
     },
     {
         "path": "assets",
@@ -42,12 +42,12 @@
     {
         "path": "/assets/js/scripts.js",
         "type": "file",
-        "md5": "3d5e44509dfc3bea6368421fcfe07890"
+        "md5": "86a056626da4244a658ba84978fab654"
     },
     {
         "path": "/assets/js/scripts.min.js",
         "type": "file",
-        "md5": "fc6f7026043f9bcb8cb4f80593f53d25"
+        "md5": "1d507cc3b0dbfffcb01484cbd663e3c3"
     },
     {
         "path": "/assets/js/svg-fix.js",
@@ -82,42 +82,32 @@
     {
         "path": "/authors/nathan/index.html",
         "type": "file",
-        "md5": "d008c6017cf7f60991a7fd899f7976d5"
+        "md5": "43c9fedaf3161d18df3ff7e51f534e21"
     },
     {
         "path": "contact.html",
         "type": "file",
-        "md5": "7a45c305a922e56634fcf5fb97804efc"
+        "md5": "25b87f170114fdac9add39fd2cceef17"
     },
     {
         "path": "cookies.html",
         "type": "file",
-        "md5": "29d2c776ca7599968297f697833d062a"
+        "md5": "f4f661cd9129101299dbae48a25b1d57"
     },
     {
         "path": "credits.html",
         "type": "file",
-        "md5": "2edd618a5679126a1747a682cff06bc8"
-    },
-    {
-        "path": "feed.json",
-        "type": "file",
-        "md5": "de7c22fb9cc6e4294ab72a0662b04f77"
-    },
-    {
-        "path": "feed.xml",
-        "type": "file",
-        "md5": "29376ac4845e3e26397555c94ffb69e5"
+        "md5": "72d0b173d60b309c081605dd4fee5537"
     },
     {
         "path": "images-du-theme.html",
         "type": "file",
-        "md5": "d9bbcc5b99fbf634e8c56f59e7f4791a"
+        "md5": "946bb62daf4baa845bc0f0aad51570f0"
     },
     {
         "path": "index.html",
         "type": "file",
-        "md5": "22e0eced505935c061a9dd2d69fa7c20"
+        "md5": "b31297fd8d137afc972c9b8a48ab1bda"
     },
     {
         "path": "ISYmap-PLAN-DEGALITE-DES-GENRES-2024-2026_1.pdf",
@@ -127,12 +117,12 @@
     {
         "path": "la-societe.html",
         "type": "file",
-        "md5": "d6ebecfa9e053dd25bb6a3cdafc3ea8d"
+        "md5": "a179adf28a43c3ac230ce3afe142ea48"
     },
     {
         "path": "logiciels.html",
         "type": "file",
-        "md5": "d02af8b17f3ec18545053422eb84ff83"
+        "md5": "4c20f5e63c2f056d0368acd5d13b2365"
     },
     {
         "path": "media",
@@ -900,16 +890,6 @@
         "md5": false
     },
     {
-        "path": "/media/website/anglais-icon.png",
-        "type": "file",
-        "md5": "630f826e1097fa6e520acd8907a8183c"
-    },
-    {
-        "path": "/media/website/français-icon.png",
-        "type": "file",
-        "md5": "604dd62dfeba49338b31ff80d305cd34"
-    },
-    {
         "path": "/media/website/logo.svg",
         "type": "file",
         "md5": "901af0cdf2393e6f8260ad968e845dee"
@@ -917,42 +897,32 @@
     {
         "path": "mentions-legales.html",
         "type": "file",
-        "md5": "7592c9710b1119c6897e179a3d242ed6"
+        "md5": "d6970d8656777a565d01be6d07496c4e"
     },
     {
         "path": "nos-reussites.html",
         "type": "file",
-        "md5": "50d35122cba17d65d4acea22db8df67a"
+        "md5": "205bf10fc86c21850ee2640ffbb36249"
     },
     {
         "path": "politique-de-confidentialite.html",
         "type": "file",
-        "md5": "2936313de3b4d1dd4defda256189e61a"
+        "md5": "543d0f8e2974b76c8b3ab5f474f25165"
     },
     {
         "path": "produits.html",
         "type": "file",
-        "md5": "14020b888c42a0a517345307a0e5fc32"
+        "md5": "f0dd47de142d5b0c74349ba944710034"
     },
     {
         "path": "robots.txt",
         "type": "file",
-        "md5": "b34e0a41f043d9c173bd7d3925efeb41"
-    },
-    {
-        "path": "sitemap.xml",
-        "type": "file",
-        "md5": "716172057da0ab18c1ddca7e17098101"
-    },
-    {
-        "path": "sitemap.xsl",
-        "type": "file",
-        "md5": "03c2f9a7fdcc46ff05c435907614a0b8"
+        "md5": "b6216d61c03e6ce0c9aea6ca7808f7ca"
     },
     {
         "path": "solutions.html",
         "type": "file",
-        "md5": "9caabdc344fa05291f295fa828fd0b74"
+        "md5": "bf0a53bdbbcd73ddf8ed4aeeeeb1269f"
     },
     {
         "path": "tags",
@@ -962,6 +932,6 @@
     {
         "path": "/tags/index.html",
         "type": "file",
-        "md5": "3ca7e248415ce9c012f55ee3c08f38ac"
+        "md5": "937f1aaac04582facaee82834b8d662e"
     }
 ]

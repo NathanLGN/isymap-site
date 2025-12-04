@@ -744,13 +744,17 @@ async function handleFormSubmit(event) {
     const form = event.target;
     const submitButton = form.querySelector('.contact-from-envoyer');
     const originalButtonText = submitButton.textContent;
+    // ---- reCAPTCHA v3 ----
+    const recaptchaToken = await grecaptcha.execute('6Lek4CAsAAAAAMJmjs-21-JBevAZTk21Jy35f5aP', { action: 'contact' });
 
     // Récupérer les données du formulaire
     const formData = {
         name: form.nom.value.trim(),
         email: form.email.value.trim(),
         subject: `Contact depuis le site ISYmap`,
-        message: constructMessage(form)
+        message: constructMessage(form),
+        // Ajouter dans les données envoyées
+        recaptcha_token : recaptchaToken
     };
 
     // Validation côté client
