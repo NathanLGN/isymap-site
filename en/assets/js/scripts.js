@@ -959,3 +959,13 @@ async function checkAPIHealth() {
 
 // Vérifier l'API au chargement (optionnel - pour debug)
 // checkAPIHealth();
+
+// Arret fenetre modal
+
+const modal = document.getElementById('exampleModal');
+
+modal.addEventListener('hidden.bs.modal', function () {
+const iframe = modal.querySelector('iframe');
+const src = iframe.getAttribute('src');
+iframe.setAttribute('src', src);
+});
