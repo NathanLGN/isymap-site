@@ -959,3 +959,15 @@ async function checkAPIHealth() {
 
 // Vérifier l'API au chargement (optionnel - pour debug)
 // checkAPIHealth();
+
+// Arret fenetre modal
+
+$('#exampleModal').on('hide.bs.modal', function () {
+  const iframe = $('#youtubeVideo');
+  iframe.attr('src', '');
+});
+
+$('#exampleModal').on('show.bs.modal', function () {
+  const iframe = $('#youtubeVideo');
+  iframe.attr('src', iframe.data('src'));
+});

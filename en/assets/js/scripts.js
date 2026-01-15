@@ -971,7 +971,3 @@ $('#exampleModal').on('show.bs.modal', function () {
   const iframe = $('#youtubeVideo');
   iframe.attr('src', iframe.data('src'));
 });
-
-$('#exampleModal').on('hide.bs.modal', function () {
-  console.log('STOP VIDEO IMMEDIAT');
-});
