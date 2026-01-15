@@ -87,7 +87,7 @@
     {
         "path": "contact.html",
         "type": "file",
-        "md5": "5def51639594189bca4acff624e2b0d2"
+        "md5": "218d4fd2ea545ad9af9c151466071027"
     },
     {
         "path": "cookies.html",
@@ -97,7 +97,7 @@
     {
         "path": "credits.html",
         "type": "file",
-        "md5": "7052d621db99f231f89daaf576865265"
+        "md5": "f5e9c64721c747a278a740086a8f8bd3"
     },
     {
         "path": "images-du-theme.html",
@@ -107,7 +107,7 @@
     {
         "path": "index.html",
         "type": "file",
-        "md5": "f60cf63419a43f250f68d5ea667018a7"
+        "md5": "7f46687b6b17834842013fae557dfed1"
     },
     {
         "path": "ISYmap-PLAN-DEGALITE-DES-GENRES-2024-2026_1.pdf",
@@ -122,12 +122,27 @@
     {
         "path": "logiciels.html",
         "type": "file",
-        "md5": "891b18840316660405e212256570fd58"
+        "md5": "6ffe752d8c4002effc7278fe89993c1a"
     },
     {
         "path": "media",
         "type": "directory",
         "md5": false
+    },
+    {
+        "path": "media/files",
+        "type": "directory",
+        "md5": false
+    },
+    {
+        "path": "/media/files/anglais-icon.png",
+        "type": "file",
+        "md5": "630f826e1097fa6e520acd8907a8183c"
+    },
+    {
+        "path": "/media/files/français-icon.png",
+        "type": "file",
+        "md5": "604dd62dfeba49338b31ff80d305cd34"
     },
     {
         "path": "media/posts",
@@ -223,6 +238,11 @@
         "path": "/media/posts/1/illustration.jpg",
         "type": "file",
         "md5": "bec5aa5f7060193b8d262649c9a80dc2"
+    },
+    {
+        "path": "/media/posts/1/INSPECTOR_site_440x290_ombre_DV.png",
+        "type": "file",
+        "md5": "b969ea145a93f8b660e99e853d670b93"
     },
     {
         "path": "/media/posts/1/ISYgo_vignette_accueil_440x290.png",
@@ -610,6 +630,11 @@
         "md5": "86bfa0bcd38bddf8ac564951e0a23568"
     },
     {
+        "path": "/media/posts/4/nos-solutions-background.jpg",
+        "type": "file",
+        "md5": "6612381f8f296add85483d5b5bfc89f9"
+    },
+    {
         "path": "/media/posts/4/Picto_isypop.png",
         "type": "file",
         "md5": "1f67c3ce915a6e8479a2985a0fb73e45"
@@ -617,7 +642,7 @@
     {
         "path": "/media/posts/4/satellite.svg",
         "type": "file",
-        "md5": "06a7b41ae02cc0439e5c6ccd7402adf1"
+        "md5": "4d3c7c3739dc2891e2f8611ee7438b25"
     },
     {
         "path": "media/posts/5",
@@ -930,19 +955,29 @@
         "md5": false
     },
     {
+        "path": "/media/website/anglais-icon.png",
+        "type": "file",
+        "md5": "630f826e1097fa6e520acd8907a8183c"
+    },
+    {
+        "path": "/media/website/français-icon.png",
+        "type": "file",
+        "md5": "604dd62dfeba49338b31ff80d305cd34"
+    },
+    {
         "path": "/media/website/logo.svg",
         "type": "file",
-        "md5": "901af0cdf2393e6f8260ad968e845dee"
+        "md5": "8d5509f600b42f8aced9957bde14bdd1"
     },
     {
         "path": "mentions-legales.html",
         "type": "file",
-        "md5": "db8acdcb601bd532efb80ba3b222cda5"
+        "md5": "a5148ac6c6cc6fdfd51f8d15b2cddb9e"
     },
     {
         "path": "nos-reussites.html",
         "type": "file",
-        "md5": "0a7a5b5b54db2efce8f34191aae0733c"
+        "md5": "1e1c7e549adeb5991413d461fc3b25dd"
     },
     {
         "path": "politique-de-confidentialite.html",
@@ -952,7 +987,7 @@
     {
         "path": "produits.html",
         "type": "file",
-        "md5": "375c0d08fce0445e590053ee4f246c47"
+        "md5": "b476a54dc5dce8121a9769b631a80e90"
     },
     {
         "path": "robots.txt",
@@ -962,7 +997,7 @@
     {
         "path": "solutions.html",
         "type": "file",
-        "md5": "8ea24a5c89927378285e4c081490e073"
+        "md5": "cf56af7d6a815e158729a3a16de7e348"
     },
     {
         "path": "tags",
