@@ -963,9 +963,12 @@ async function checkAPIHealth() {
 // Arret fenetre modal
 
 const modal = document.getElementById('exampleModal');
+const iframe = document.getElementById('youtubeVideo');
 
-modal.addEventListener('hidden.bs.modal', function () {
-const iframe = modal.querySelector('iframe');
-const src = iframe.getAttribute('src');
-iframe.setAttribute('src', src);
+modal.addEventListener('show.bs.modal', () => {
+iframe.src = iframe.dataset.src;
+});
+
+modal.addEventListener('hidden.bs.modal', () => {
+iframe.src = '';
 });
