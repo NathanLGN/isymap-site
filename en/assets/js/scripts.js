@@ -962,18 +962,16 @@ async function checkAPIHealth() {
 
 // Arret fenetre modal
 
-const modal = document.getElementById('exampleModal');
-const iframe = document.getElementById('youtubeVideo');
-const src = iframe.src;
-
-modal.addEventListener('hide.bs.modal', function () {
-iframe.src = '';
+$('#exampleModal').on('hide.bs.modal', function () {
+  const iframe = $('#youtubeVideo');
+  iframe.attr('src', '');
 });
 
-modal.addEventListener('show.bs.modal', function () {
-iframe.src = src;
+$('#exampleModal').on('show.bs.modal', function () {
+  const iframe = $('#youtubeVideo');
+  iframe.attr('src', iframe.data('src'));
 });
 
-modal.addEventListener('hidden.bs.modal', () => {
-  console.log('MODALE FERMÉE');
+$('#exampleModal').on('hide.bs.modal', function () {
+  console.log('STOP VIDEO IMMEDIAT');
 });
