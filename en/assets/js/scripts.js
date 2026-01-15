@@ -962,12 +962,16 @@ async function checkAPIHealth() {
 
 // Arret fenetre modal
 
-$('#exampleModal').on('hidden.bs.modal', function () {
-  $('#youtubeVideo').attr('src', '');
+const modal = document.getElementById('exampleModal');
+const iframe = document.getElementById('youtubeVideo');
+const src = iframe.src;
+
+modal.addEventListener('hide.bs.modal', function () {
+iframe.src = '';
 });
 
-$('#exampleModal').on('show.bs.modal', function () {
-  $('#youtubeVideo').attr('src', $('#youtubeVideo').data('src'));
+modal.addEventListener('show.bs.modal', function () {
+iframe.src = src;
 });
 
 modal.addEventListener('hidden.bs.modal', () => {
