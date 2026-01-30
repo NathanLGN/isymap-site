@@ -3992,6 +3992,25 @@ figure {
   }
 }
 
+@media (max-width: 500px){
+  .produit-titre-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap; 
+    margin-bottom: 55px;
+  }
+
+  .produit-titre-container-titre {
+    padding-left: 0;
+  }
+
+  .produit-titre-container-list {
+    flex-basis: 100%; 
+    margin-top: 28px;
+  }
+}
+
 .container-item {
   text-align: justify;
 }
@@ -4513,6 +4532,12 @@ figure {
   }
 }
 
+@media (max-width: 767px){
+  .order-1, .order-2, .order-3{
+    order: 0;
+  }
+}
+
 /* la société */
 
 .mb-5 {
@@ -4926,6 +4951,8 @@ small {
 article.page p + h2, article.page p + h3, article.page p + h4, article.page p + h5, article.page p + h6 {
   margin-top: 1em;
 }
+
+strong {}
 
 .post-18 a, .post-21 a, .mb-5 h2 a {
   color: #79c7de;

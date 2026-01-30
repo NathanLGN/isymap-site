@@ -3992,6 +3992,25 @@ figure {
   }
 }
 
+@media (max-width: 500px){
+  .produit-titre-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap; 
+    margin-bottom: 55px;
+  }
+
+  .produit-titre-container-titre {
+    padding-left: 0;
+  }
+
+  .produit-titre-container-list {
+    flex-basis: 100%; 
+    margin-top: 28px;
+  }
+}
+
 .container-item {
   text-align: justify;
 }
@@ -4345,6 +4364,12 @@ figure {
   .container-solutions-text {
     flex: 0 0 75%;
     max-width: 75%;
+  }
+}
+
+@media (max-width: 767px){
+  .order-1, .order-2, .order-3{
+    order: 0;
   }
 }
 
